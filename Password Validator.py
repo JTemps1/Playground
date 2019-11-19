@@ -11,6 +11,7 @@ import string
 caps = list(string.ascii_uppercase)
 letters = list(string.ascii_lowercase)
 ints = list(map(str, range(10)))
+specs = list(string.punctiation)
 password = input('Password: ')
 
 if len(password) > 10:
@@ -30,7 +31,7 @@ else:
         elif char in caps:
             capitals += 1
             
-        elif char not in letters:
+        elif char in specs:
             specials += 1
         
         else:
